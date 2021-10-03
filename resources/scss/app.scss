@@ -1,0 +1,68 @@
+@import './variables';
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothening:antialiased;
+    color: $dark;
+    
+}
+nav li a:hover{
+    transition:$smooth;
+    color:red;
+}
+nav li:last-child a{
+    background: $primary;
+    margin-right: 80px;
+}
+nav li:last-child a:hover{
+   background-color: rgb(32, 230, 32);
+}
+#logo {
+    padding-top: 15px;
+    width: 310px;
+    height: 242px;
+    margin: -59px 0px;
+}
+#container{
+    background: yellow;
+    position:fixed;
+}
+#chefImg{
+    width: 315px;
+}
+#sectionContainer{
+    padding-left: 243px;
+    margin-top: 160px;
+}
+#heroText{
+    margin-right: 505px;
+    margin-left: -138px;
+    
+}
+section.hero{
+    background: $secondary;
+}
+#collectionHeading{
+    margin-left: 40%;
+}
+.add-to-cart{
+    border: 2px solid $myred;
+    color: $myred;
+    transition: $smooth;
+}
+.add-to-cart:hover{
+   background: $myred;
+   border-color:$pure ;
+   color: $pure;
+}
+#itemsContainer{
+    margin-left: 73px;
+}
+#items{
+    width: 100%;
+    height: 73%;
+}
