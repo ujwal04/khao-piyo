@@ -19,20 +19,23 @@ nav li:last-child a {
   margin-right: 80px;
 }
 
+nav li:last-child img {
+  width: 40px;
+}
+
 nav li:last-child a:hover {
   background-color: #20e620;
 }
 
 #logo {
   padding-top: 15px;
-  width: 310px;
-  height: 242px;
+  width: 240px;
+  height: 202px;
   margin: -59px 0px;
 }
 
 #container {
   background: yellow;
-  position: fixed;
 }
 
 #chefImg {
@@ -41,7 +44,6 @@ nav li:last-child a:hover {
 
 #sectionContainer {
   padding-left: 243px;
-  margin-top: 160px;
 }
 
 #heroText {
@@ -76,4 +78,32 @@ section.hero {
 #items {
   width: 100%;
   height: 73%;
+}
+
+.btn-primary {
+  background: #e72124;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #e72124;
+  background: #b80c0c;
+}
+
+section.cart {
+  background: #F8F8F8;
+}
+section.cart .amount {
+  color: #e72124;
+}
+
+section.login {
+  background: #F8F8F8;
+  min-height: calc(100vh - 86px);
+}
+section.login a {
+  color: #e72124;
+}
+section.login a:hover {
+  color: #b80c0c;
 }

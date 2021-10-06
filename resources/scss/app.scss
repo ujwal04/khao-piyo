@@ -17,26 +17,31 @@ nav li a:hover{
 nav li:last-child a{
     background: $primary;
     margin-right: 80px;
+    
+}
+nav li:last-child img{
+    width: 40px;
+    
 }
 nav li:last-child a:hover{
    background-color: rgb(32, 230, 32);
 }
 #logo {
     padding-top: 15px;
-    width: 310px;
-    height: 242px;
+    width: 240px;
+    height: 202px;
     margin: -59px 0px;
 }
 #container{
     background: yellow;
-    position:fixed;
+  
 }
 #chefImg{
     width: 315px;
 }
 #sectionContainer{
     padding-left: 243px;
-    margin-top: 160px;
+  
 }
 #heroText{
     margin-right: 505px;
@@ -65,4 +70,28 @@ section.hero{
 #items{
     width: 100%;
     height: 73%;
+}
+.btn-primary{
+    background: $myred;
+    transition: $smooth;
+}
+.btn-primary:hover{
+    background: $myred;
+    background: $myred-hover;
+}
+section.cart{
+    background: $secondary;
+    .amount{
+        color: $myred;
+    }
+}
+section.login {
+    background: $secondary;
+    min-height: calc(100vh - 86px);
+    a {
+        color: $myred;
+        &:hover {
+            color: $myred-hover;
+        }
+    }
 }
