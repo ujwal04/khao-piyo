@@ -1,4 +1,4 @@
-<section class="hero py-16">
+<section class="hero py-16" id="backg">
     <div class="container mx-auto flex items-center justify-between" id="sectionContainer">
         <div class="w-1/2" id="heroText">
             <h6 class="text-lg"><em>Are you hungary?</em></h6>
@@ -11,85 +11,273 @@
     </div>
 </section>
 <section class="menu container mx-auto py-8">
-    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Collections</h1>
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Indian Veg Starters</h1>
     <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% ivs.forEach(function(ivs){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= ivs.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= ivs.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%= ivs.price %></span>
+                        <button data-ivs="<%= JSON.stringify(ivs) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+    </div> 
+</div> 
+<br> 
+<h1 class="text-6xl font-bold mb-8" id="collectionHeading">Indian Non-Veg Starters</h1>
+<div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <% indiannonvegstarter.forEach(function(indiannonvegstarter){ %>
         <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/img/sample.png" id="items" alt="">
+            <img class="h-40 mb-4 mx-auto" src="/img/<%= indiannonvegstarter.image %>" id="items" alt="">
             <div class="text-center">
-                <h2 class="mb-4 text-lg">Haddipa Paneer Tikka</h2>
+                <h2 class="mb-4 text-lg">
+                    <%= indiannonvegstarter.name %>
+                </h2>
                 <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">Rs 175</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                    <span class="font-bold text-lg">₹<%= indiannonvegstarter.price %></span>
+                    <button data-ivs="<%= JSON.stringify(indiannonvegstarter) %>"
+                        class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
                         <span>+</span>
                         <span class="ml-4">Add</span>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/img/sample.png" id="items" alt="">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Haddipa Paneer Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">Rs 175</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
+
+    <% }) %>
+</div>   
+<br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Veg Main Course</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% vegmaincourse.forEach(function(vegmaincourse){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= vegmaincourse.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= vegmaincourse.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%=vegmaincourse.price %></span>
+                        <button data-ivs="<%= JSON.stringify(vegmaincourse) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/img/sample.png" id="items" alt="">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Haddipa Paneer Tickka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">Rs 175</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
+
+        <% }) %>
+    </div>  
+    <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Non-Veg Main Course</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% nonvegmaincourse.forEach(function(nonvegmaincourse){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= nonvegmaincourse.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= nonvegmaincourse.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%=nonvegmaincourse.price %></span>
+                        <button data-ivs="<%= JSON.stringify(nonvegmaincourse) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/img/sample.png" id="items" alt="">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Haddipa Paneer Tickka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">Rs 175</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
+
+        <% }) %>
+    </div> 
+    <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Thali</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% thali.forEach(function(thali){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= thali.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= thali.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%=thali.price %></span>
+                        <button data-ivs="<%= JSON.stringify(thali) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/img/sample.png" id="items" alt="">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Haddipa Paneer Tickka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">Rs 175</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
+
+        <% }) %>
+    </div>   
+    <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Khao Piyo Biryani</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% khaopiyobiryani.forEach(function(khaopiyobiryani){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= khaopiyobiryani.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= khaopiyobiryani.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%= khaopiyobiryani.price %></span>
+                        <button data-ivs="<%= JSON.stringify(khaopiyobiryani) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/img/sample.png" id="items" alt="">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Haddipa Paneer Tickka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">Rs 175</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
+
+        <% }) %>
+    </div>
+    <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Rice Option</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% riceoption.forEach(function(riceoption){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= riceoption.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= riceoption.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%=riceoption.price %></span>
+                        <button data-ivs="<%= JSON.stringify(riceoption) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        <% }) %>
+    </div> 
+
+    <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Breads</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% bread.forEach(function(bread){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= bread.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= bread.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%= bread.price %></span>
+                        <button data-ivs="<%= JSON.stringify(bread) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+    </div>   
+        <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Raita And Salad</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% raitaandsalad.forEach(function(raitaandsalad){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= raitaandsalad.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= raitaandsalad.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%=raitaandsalad.price %></span>
+                        <button data-ivs="<%= JSON.stringify(raitaandsalad) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+    </div>     
+    <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Chinese</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% chineseitem.forEach(function(chineseitem){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= chineseitem.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= chineseitem.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%= chineseitem.price %></span>
+                        <button data-ivs="<%= JSON.stringify(chineseitem) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+    </div>
+    
+    <br> 
+    <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Khao Piyo Quicks</h1>
+    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+        <% khaopiyoquick.forEach(function(khaopiyoquick){ %>
+            <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= khaopiyoquick.image %>" id="items" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%= khaopiyoquick.name %>
+                    </h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%=khaopiyoquick.price %></span>
+                        <button data-ivs="<%= JSON.stringify(khaopiyoquick) %>"
+                            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+    </div> 
+    </div> 
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+          
+
 
 </section>
