@@ -18,7 +18,7 @@ function initRoutes(app) {
 
     app.get('/login', guest, authController().login);
 
-     app.post('/login', authController().postLogin);
+    app.post('/login', authController().postLogin);
 
     app.get('/register', guest, authController().register);
 
@@ -29,7 +29,10 @@ function initRoutes(app) {
 
 
     app.get('/cart', cartController().index);
+    app.post('/remove-cart', cartController().remove);
     app.post('/update-cart', cartController().update);
+   
+   
 
     // Customer routes
     app.post('/orders',auth,orderController().store)
@@ -39,6 +42,9 @@ function initRoutes(app) {
     //Admin routes
     app.get('/admin/orders',admin, adminOrderController().index)
     app.post('/admin/order/status',admin, statusController().update)
+
+   
+    
     
 
   

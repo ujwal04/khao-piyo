@@ -5,12 +5,32 @@ import moment from 'moment'
 
 
 let addTocart=document.querySelectorAll('.add-to-cart');
+let deleteCart=document.querySelectorAll('.deleteCart');
 let cartCounter=document.querySelector('#cartCounter')
+
+// function removeCart(item){
+
+//     console.log()
+//     axios.post('/remove-cart',item).then(res=>{
+//         console.log(item)
+//         itemCounter.innerText= res.data.totalQty
+        
+//     }).catch(err=>{
+//         console.log(err)
+//         new Noty({
+//             type: 'error',
+//             timeout:1000,
+//             text: "Something went wrong",
+//             progressBar: false
+//           }).show();
+        
+//     })
+// }
 
 
 function updateCart(ivs){
     axios.post('/update-cart',ivs).then(res=>{
-        console.log(res);
+        
         cartCounter.innerText= res.data.totalQty
         new Noty({
             type: 'success',
@@ -32,9 +52,19 @@ addTocart.forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
         
         let ivs=JSON.parse(btn.dataset.ivs);
-        console.log(ivs)
         
+     
         updateCart(ivs)
+        
+    })
+})
+deleteCart.forEach((btn)=>{
+    btn.addEventListener('click',(e)=>{
+        
+        let item=JSON.parse(btn.dataset.item);
+        console.log(item)
+     
+        // removeCart(item)
         
     })
 })
@@ -113,3 +143,5 @@ socket.on('orderUpdated', (data) => {
         progressBar: false,
     }).show();
 })
+
+

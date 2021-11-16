@@ -292,8 +292,8 @@ nav li a:hover {
 }
 
 nav li:last-child a {
-  background: #faed00;
-  margin-right: 80px;
+  background: red;
+  margin-right: 20px;
 }
 
 nav li:last-child img {
@@ -301,22 +301,23 @@ nav li:last-child img {
 }
 
 nav li:last-child a:hover {
-  background-color: #20e620;
+  background-color: #b80c0c;
 }
 
 #logo {
-  padding-top: 24px;
-  width: 429px;
-  height: 338px;
-  margin: -102px 0px;
+  padding-top: 33px;
+  width: 615px;
+  height: 336px;
+  margin: 0px -78px;
 }
 
 #container {
-  background: yellow;
+  height: 116px;
 }
 
 #chefImg {
-  width: 315px;
+  width: 434px;
+  height: 422px;
 }
 
 #sectionContainer {
@@ -330,6 +331,10 @@ nav li:last-child a:hover {
 
 section.hero {
   background: #F8F8F8;
+}
+
+.menu {
+  margin-right: 152px;
 }
 
 #collectionHeading {
@@ -509,4 +514,22 @@ section.status {
   float: right;
   font-size: 14px;
   margin-top: 4px;
+}
+
+@media (max-width: 1300px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
+
+  #cartImage {
+    width: 25px;
+    margin-right: 20px;
+  }
 }

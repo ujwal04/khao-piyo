@@ -17,8 +17,8 @@ nav li a:hover{
     color:red;
 }
 nav li:last-child a{
-    background: $primary;
-    margin-right: 80px;
+    background: red;
+    margin-right: 20px;
     
 }
 nav li:last-child img{
@@ -26,20 +26,23 @@ nav li:last-child img{
     
 }
 nav li:last-child a:hover{
-   background-color: rgb(32, 230, 32);
+   background-color: $myred-hover;
 }
-#logo {
-    padding-top: 24px;
-    width: 429px;
-    height: 338px;
-    margin: -102px 0px;
+#logo { 
+    padding-top: 33px;
+    width: 615px;
+    height: 336px;
+    margin: 0px -78px;
 }
+
 #container{
-    background: yellow;
   
+    height: 116px;
 }
 #chefImg{
-    width: 315px;
+    width: 434px;
+    height: 422px;
+    
 }
 #sectionContainer{
     padding-left: 243px;
@@ -53,6 +56,9 @@ nav li:last-child a:hover{
 }
 section.hero{
     background: $secondary;
+}
+.menu{
+    margin-right: 152px;
 }
 #collectionHeading {
     align-items: center;
@@ -215,3 +221,28 @@ section.status{
     font-size: 14px;
     margin-top: 4px;
 }
+//Media queries
+
+@media(max-width:1300px) {
+    
+    table {
+       display: block;
+       overflow-x: auto;
+       white-space: nowrap;
+    }
+}
+@media(max-width: 768px) {
+    .status-box ul li span:before {
+        font-size: 34px;
+
+    }
+    #cartImage{
+        width: 25px;
+        margin-right: 20px;
+    }
+}
+// @media(max-width: 1200px){
+//    #sectionContainer{
+  
+//    }
+// }

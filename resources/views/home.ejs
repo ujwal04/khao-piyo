@@ -2,8 +2,8 @@
     <div class="container mx-auto flex items-center justify-between" id="sectionContainer">
         <div class="w-1/2" id="heroText">
             <h6 class="text-lg"><em>Are you hungary?</em></h6>
-            <h1 class="text-6xl font-bold">Don't wait !</h1>
-            <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">Order Now</button>
+            <h1 class="text-3xl md:text-6xl font-bold">Don't wait !</h1>
+           <a href="/cart"><button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">Order Now</button></a> 
         </div>
         <div class="w-1/2">
             <img src="/img/chef.png" id="chefImg" alt="">
@@ -12,9 +12,9 @@
 </section>
 <section class="menu container mx-auto py-8">
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Indian Veg Starters</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
         <% ivs.forEach(function(ivs){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= ivs.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -36,9 +36,9 @@
 </div> 
 <br> 
 <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Indian Non-Veg Starters</h1>
-<div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12" id="itemsContainer">
     <% indiannonvegstarter.forEach(function(indiannonvegstarter){ %>
-        <div class="w-64">
+        <div class="w-full md:w-64">
             <img class="h-40 mb-4 mx-auto" src="/img/<%= indiannonvegstarter.image %>" id="items" alt="">
             <div class="text-center">
                 <h2 class="mb-4 text-lg">
@@ -59,9 +59,9 @@
 </div>   
 <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Veg Main Course</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
         <% vegmaincourse.forEach(function(vegmaincourse){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= vegmaincourse.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -82,9 +82,9 @@
     </div>  
     <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Non-Veg Main Course</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
         <% nonvegmaincourse.forEach(function(nonvegmaincourse){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= nonvegmaincourse.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -105,9 +105,9 @@
     </div> 
     <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Thali</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12" id="itemsContainer">
         <% thali.forEach(function(thali){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= thali.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -128,9 +128,9 @@
     </div>   
     <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Khao Piyo Biryani</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12" id="itemsContainer">
         <% khaopiyobiryani.forEach(function(khaopiyobiryani){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= khaopiyobiryani.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -151,9 +151,9 @@
     </div>
     <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Rice Option</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12" id="itemsContainer">
         <% riceoption.forEach(function(riceoption){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= riceoption.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -175,9 +175,9 @@
 
     <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Breads</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12" id="itemsContainer">
         <% bread.forEach(function(bread){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= bread.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -198,9 +198,9 @@
     </div>   
         <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Raita And Salad</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
         <% raitaandsalad.forEach(function(raitaandsalad){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= raitaandsalad.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -221,9 +221,9 @@
     </div>     
     <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Chinese</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12" id="itemsContainer">
         <% chineseitem.forEach(function(chineseitem){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= chineseitem.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">
@@ -245,9 +245,9 @@
     
     <br> 
     <h1 class="text-6xl font-bold mb-8" id="collectionHeading">Khao Piyo Quicks</h1>
-    <div class="grid grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-12 " id="itemsContainer">
         <% khaopiyoquick.forEach(function(khaopiyoquick){ %>
-            <div class="w-64">
+            <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= khaopiyoquick.image %>" id="items" alt="">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">

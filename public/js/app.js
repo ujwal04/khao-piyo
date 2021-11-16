@@ -1879,11 +1879,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var addTocart = document.querySelectorAll('.add-to-cart');
-var cartCounter = document.querySelector('#cartCounter');
+var deleteCart = document.querySelectorAll('.deleteCart');
+var cartCounter = document.querySelector('#cartCounter'); // function removeCart(item){
+//     console.log()
+//     axios.post('/remove-cart',item).then(res=>{
+//         console.log(item)
+//         itemCounter.innerText= res.data.totalQty
+//     }).catch(err=>{
+//         console.log(err)
+//         new Noty({
+//             type: 'error',
+//             timeout:1000,
+//             text: "Something went wrong",
+//             progressBar: false
+//           }).show();
+//     })
+// }
 
 function updateCart(ivs) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', ivs).then(function (res) {
-    console.log(res);
     cartCounter.innerText = res.data.totalQty;
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
       type: 'success',
@@ -1904,8 +1918,13 @@ function updateCart(ivs) {
 addTocart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     var ivs = JSON.parse(btn.dataset.ivs);
-    console.log(ivs);
     updateCart(ivs);
+  });
+});
+deleteCart.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    var item = JSON.parse(btn.dataset.item);
+    console.log(item); // removeCart(item)
   });
 }); // Remove alert message after X seconds
 
