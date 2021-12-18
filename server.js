@@ -17,7 +17,7 @@ const Emitter = require('events')
 
 
 //database connection
-mongoose.connect('mongodb://localhost/khao-piyo', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
@@ -70,6 +70,9 @@ app.set('view engine', 'ejs');
 
 //Routes
 require('./routes/web')(app)
+app.use((req,res)=>{
+    res.status(404).render('errors/404')
+})
 
 
 //Listening to port
