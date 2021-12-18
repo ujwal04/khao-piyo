@@ -2,7 +2,7 @@
     <div class="container mx-auto flex items-center justify-between" id="sectionContainer">
         <div class="w-1/2" id="heroText">
             <h6 class="text-lg"><em>Are you hungary?</em></h6>
-            <h1 class="text-3xl md:text-6xl font-bold">Don't wait !</h1>
+            <h1 id="dontWait" class="text-3xl md:text-6xl font-bold">Don't wait !</h1>
            <a href="/cart"><button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">Order Now</button></a> 
         </div>
         <div class="w-1/2">
@@ -17,7 +17,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= ivs.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2 id="itemName" class="mb-4 text-lg">
                         <%= ivs.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -41,7 +41,7 @@
         <div class="w-full md:w-64">
             <img class="h-40 mb-4 mx-auto" src="/img/<%= indiannonvegstarter.image %>" id="items" alt="">
             <div class="text-center">
-                <h2 class="mb-4 text-lg">
+                <h2  id="itemName" class="mb-4 text-lg">
                     <%= indiannonvegstarter.name %>
                 </h2>
                 <div class="flex items-center justify-around mt-6">
@@ -64,7 +64,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= vegmaincourse.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= vegmaincourse.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -87,7 +87,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= nonvegmaincourse.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= nonvegmaincourse.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -110,7 +110,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= thali.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= thali.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -132,7 +132,7 @@
         <% khaopiyobiryani.forEach(function(khaopiyobiryani){ %>
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= khaopiyobiryani.image %>" id="items" alt="">
-                <div class="text-center">
+                <div  id="itemName" class="text-center">
                     <h2 class="mb-4 text-lg">
                         <%= khaopiyobiryani.name %>
                     </h2>
@@ -156,7 +156,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= riceoption.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= riceoption.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -180,7 +180,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= bread.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= bread.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -203,7 +203,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= raitaandsalad.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= raitaandsalad.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -226,7 +226,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= chineseitem.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= chineseitem.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">
@@ -250,7 +250,7 @@
             <div class="w-full md:w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/<%= khaopiyoquick.image %>" id="items" alt="">
                 <div class="text-center">
-                    <h2 class="mb-4 text-lg">
+                    <h2  id="itemName" class="mb-4 text-lg">
                         <%= khaopiyoquick.name %>
                     </h2>
                     <div class="flex items-center justify-around mt-6">

@@ -8,24 +8,25 @@ let addTocart=document.querySelectorAll('.add-to-cart');
 let deleteCart=document.querySelectorAll('.deleteCart');
 let cartCounter=document.querySelector('#cartCounter')
 
-// function removeCart(item){
+function removeCart(item){
 
-//     console.log()
-//     axios.post('/remove-cart',item).then(res=>{
-//         console.log(item)
-//         itemCounter.innerText= res.data.totalQty
+   
+    axios.post('/remove-cart',item).then(res=>{
+        console.log(res.data)
+    
+        // itemCounter.innerText= res.data.totalQty
         
-//     }).catch(err=>{
-//         console.log(err)
-//         new Noty({
-//             type: 'error',
-//             timeout:1000,
-//             text: "Something went wrong",
-//             progressBar: false
-//           }).show();
+    }).catch(err=>{
+        console.log(err.data.message)
+        new Noty({
+            type: 'error',
+            timeout:1000,
+            text: "Something went wrong",
+            progressBar: false
+          }).show();
         
-//     })
-// }
+    })
+}
 
 
 function updateCart(ivs){
@@ -64,7 +65,7 @@ deleteCart.forEach((btn)=>{
         let item=JSON.parse(btn.dataset.item);
         console.log(item)
      
-        // removeCart(item)
+        removeCart(item)
         
     })
 })
@@ -118,7 +119,7 @@ updateStatus(order);
 // Socket
 let socket = io()
 
-new initAdmin(socket)
+
 
 // Join
 if(order) {
@@ -127,7 +128,7 @@ if(order) {
 
 let adminAreaPath = window.location.pathname
 if(adminAreaPath.includes('admin')) {
-    // initAdmin(socket)
+    initAdmin(socket)
     socket.emit('join', 'adminRoom')
 }
 

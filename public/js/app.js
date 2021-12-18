@@ -1880,21 +1880,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var addTocart = document.querySelectorAll('.add-to-cart');
 var deleteCart = document.querySelectorAll('.deleteCart');
-var cartCounter = document.querySelector('#cartCounter'); // function removeCart(item){
-//     console.log()
-//     axios.post('/remove-cart',item).then(res=>{
-//         console.log(item)
-//         itemCounter.innerText= res.data.totalQty
-//     }).catch(err=>{
-//         console.log(err)
-//         new Noty({
-//             type: 'error',
-//             timeout:1000,
-//             text: "Something went wrong",
-//             progressBar: false
-//           }).show();
-//     })
-// }
+var cartCounter = document.querySelector('#cartCounter');
+
+function removeCart(item) {
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/remove-cart', item).then(function (res) {
+    console.log(res.data); // itemCounter.innerText= res.data.totalQty
+  })["catch"](function (err) {
+    console.log(err.data.message);
+    new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
+      type: 'error',
+      timeout: 1000,
+      text: "Something went wrong",
+      progressBar: false
+    }).show();
+  });
+}
 
 function updateCart(ivs) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', ivs).then(function (res) {
@@ -1924,7 +1924,8 @@ addTocart.forEach(function (btn) {
 deleteCart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     var item = JSON.parse(btn.dataset.item);
-    console.log(item); // removeCart(item)
+    console.log(item);
+    removeCart(item);
   });
 }); // Remove alert message after X seconds
 
@@ -1970,8 +1971,7 @@ function updateStatus(order) {
 
 updateStatus(order); // Socket
 
-var socket = io();
-new _admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin(socket); // Join
+var socket = io(); // Join
 
 if (order) {
   socket.emit('join', "order_".concat(order._id));
@@ -1980,7 +1980,7 @@ if (order) {
 var adminAreaPath = window.location.pathname;
 
 if (adminAreaPath.includes('admin')) {
-  // initAdmin(socket)
+  (0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)(socket);
   socket.emit('join', 'adminRoom');
 }
 

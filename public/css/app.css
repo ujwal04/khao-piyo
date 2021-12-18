@@ -523,13 +523,142 @@ section.status {
     white-space: nowrap;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1027px) {
+  #chefImg {
+    display: none;
+  }
+
+  #heroText {
+    text-align: center;
+    margin-right: 505px;
+    margin-left: 69px;
+  }
+
+  #dontWait {
+    font-size: 4.75rem;
+  }
+}
+@media (max-width: 769px) {
   .status-box ul li span:before {
     font-size: 34px;
   }
 
-  #cartImage {
-    width: 25px;
-    margin-right: 20px;
+  #sectionContainer {
+    display: none;
+  }
+
+  #cartCounter {
+    padding-right: 3px;
+  }
+}
+@media (max-width: 764px) {
+  #collectionHeading {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-size: 48px;
+    margin: 33px 0px;
+    font-family: cursive;
+    color: #e72124;
+    margin-left: 64px;
+  }
+
+  #items {
+    margin-left: 91px;
+    width: 76%;
+    height: 73%;
+  }
+
+  #itemName {
+    margin-left: 42px;
+  }
+
+  .add-to-cart {
+    border: 2px solid #e72124;
+    color: #e72124;
+    transition: all 0.3s ease-in-out;
+    margin-right: -60px;
+  }
+}
+@media (max-width: 644px) {
+  .status-box {
+    width: 80%;
+  }
+}
+@media (max-width: 644px) {
+  #container {
+    width: 90%;
+  }
+
+  #logo {
+    padding-top: 33px;
+    width: 615px;
+    height: 336px;
+    margin: 2px -54px;
+  }
+
+  #cartCounter {
+    padding-right: 0px;
+  }
+
+  nav li:last-child img {
+    width: 51px;
+    margin: 4px;
+  }
+}
+@media (max-width: 558px) {
+  #logo {
+    padding-top: 33px;
+    width: 615px;
+    height: 336px;
+    margin: 2px -43px;
+  }
+}
+@media (max-width: 494px) {
+  #logo {
+    padding-top: 24px;
+    width: 615px;
+    height: 250px;
+    margin: 1px -28px;
+  }
+}
+@media (max-width: 475px) {
+  #cartItemImage {
+    width: 80px;
+  }
+}
+@media (max-width: 475px) {
+  #collectionHeading {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-size: 28px;
+    margin: 33px 0px;
+    font-family: cursive;
+    color: #e72124;
+    margin-left: 21px;
+  }
+
+  #items {
+    margin-left: 80px;
+    width: 54%;
+    height: 68%;
+  }
+
+  .add-to-cart {
+    border: 2px solid #e72124;
+    color: #e72124;
+    transition: all 0.3s ease-in-out;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 390px) {
+  #logo {
+    padding-top: 24px;
+    width: 615px;
+    height: 220px;
+    margin: 1px -10px;
   }
 }

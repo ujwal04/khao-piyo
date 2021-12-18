@@ -8,13 +8,13 @@
         <div class="cart-items ">
             <% for(let b of Object.values(session.cart.items)) { %>
             <div class="flex items-center my-8">
-                <img class="w-32" src="/img/<%= b.item.image%>" alt="">
+                <img id="cartItemImage" class="w-32" src="/img/<%= b.item.image%>" alt="">
                 <div class="flex-1 ml-4">
                     <h1><%= b.item.name%></h1>
                 </div>
                 <span id="itemCounter" class="flex-1"><%= b.qty%></span>
                 <span class="font-bold text-lg">₹<%= b.item.price * b.qty%></span>
-                <button  class=" ml-12 deleteCart py-1 px-6 rounded-full flex items-center font-bold" id="deleteCartButton" data-item="<%=b.item._id%>" method="POST"  >DELETE</button>                 
+                <button  class=" btn-primary ml-12 deleteCart py-1 px-6 rounded-full flex items-center font-bold"  id="deleteCartButton" data-item="<%=JSON.stringify(b.item._id)%>" method="POST" >DELETE</button>                 
             </div>
             <% } %>
 

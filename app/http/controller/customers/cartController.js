@@ -9,22 +9,29 @@ function cartController() {
         remove(req,res){
             
             let cart=req.session.cart;
-
-            if(cart.totalQty>0){
-                cart.totalQty=cart.totalQty-1;
-                cart.price=cart.price -req.body.price;
-
-                if(cart.items[req.body._id].qty ==1){
-                    delete cart.items[req.body._id];
-                }else{
-                    cart.items[req.body._id].qty=cart.items[req.body._id].qty-1;
-                }
-                if(cart.totalQty===0){
-                    delete req.session.cart;
-                }
+            let itemToBeDeleted=Object.keys(req.body)[0];
+            let itemm=cart.items[itemToBeDeleted];
+            let price=cart.items[itemToBeDeleted].item.price;
+            // let totalQty=cart.totalQty;
+            // let totalPrice=cart.totalPrice;
+            itemm.qty--
+            cart.totalQty--
+            cart.totalPrice-=price
+            // console.log('qty',cart.item[itemToBeDeleted].qty);
+            if(itemm.qty===0){
+                delete cart.items[itemToBeDeleted];
             }
-            let totalQty=cart ? cart.totalQty : 0;
-            return res.json({totalQty:totalQty, cartItems: cart.items});
+            // console.log(cart)
+            // console.log(itemToBeDeleted)
+            // console.log(totalQty);
+            // console.log(totalPrice);
+            // console.log(price);
+            
+            return res.json(cart)
+
+
+
+          
         },
 
         update(req,res){
